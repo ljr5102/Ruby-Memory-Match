@@ -29,6 +29,7 @@ describe Board do
       board = Board.generate_board(:easy)
       expect(board.flatten.all? { |card| card.is_a?(Card) }).to be true
     end
+
   end
 
   describe "#initialize" do
@@ -85,6 +86,7 @@ describe Board do
       board.flip(0, 0)
       expect(board.display).to eq("---------\n| 1 | X |\n---------\n| X | X |\n---------\n")
     end
+
   end
 
   describe "#matches" do
@@ -98,5 +100,6 @@ describe Board do
     it "returns false when the card values at both spots do not match" do
       expect(board.matches([0, 0], [1, 1])).to be false
     end
+    
   end
 end

@@ -1,3 +1,5 @@
+require 'card'
+
 class Board
 
   def self.generate_board(difficulty)

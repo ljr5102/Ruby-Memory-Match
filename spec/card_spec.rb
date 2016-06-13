@@ -2,6 +2,7 @@ require 'rspec'
 require 'card'
 
 describe Card do
+  
   describe "#initialize" do
 
     card = Card.new(1)
@@ -68,6 +69,6 @@ describe Card do
       card.show
       expect(card.to_s).to eq(" 1 ")
     end
-    
+
   end
 end

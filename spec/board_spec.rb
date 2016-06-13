@@ -86,4 +86,17 @@ describe Board do
       expect(board.display).to eq("---------\n| 1 | X |\n---------\n| X | X |\n---------\n")
     end
   end
+
+  describe "#matches" do
+    grid = [[Card.new(1), Card.new(1)], [Card.new(2), Card.new(2)]]
+    board = Board.new(grid)
+
+    it "returns true when the card values at both spots match"do
+      expect(board.matches([0, 0], [0, 1])).to be true
+    end
+
+    it "returns false when the card values at both spots do not match" do
+      expect(board.matches([0, 0], [1, 1])).to be false
+    end
+  end
 end

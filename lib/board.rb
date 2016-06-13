@@ -44,6 +44,10 @@ class Board
     self[row, col].showing ? self[row, col].unshow : self[row, col].show
   end
 
+  def matches(loc1, loc2)
+    self[loc1[0], loc1[1]].matches?(self[loc2[0], loc2[1]])
+  end
+
   def display
     display_string = ""
     borders = ""

@@ -7,4 +7,14 @@ class Game
     @board = board
   end
 
+  def over?
+    board.flatten.all? { |card| card.showing }
+  end
+
+  def play
+    until over?
+      puts "you're stuck!"
+    end
+  end
+
 end

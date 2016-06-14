@@ -13,4 +13,16 @@ describe Player do
 
   end
 
+  describe "#guess" do
+
+    player = Player.new("Player One")
+
+    it "returns two arrays of values guessed by the user" do
+      expect(player.guess.length).to eq(2)
+      expect(player.guess[0].length).to eq(2)
+      expect(player.guess[1].length).to eq(2)
+    end
+    
+  end
+
 end
